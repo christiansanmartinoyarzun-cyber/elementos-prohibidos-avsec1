@@ -1,5 +1,5 @@
 /* Service worker: funciona sin conexión (caché del sitio + recursos CDN) */
-const CACHE = 'epv-v2';
+const CACHE = 'epv-v3';
 const APP = ['./', './index.html', './styles.css', './script.js', './manifest.json', './icon.svg'];
 
 self.addEventListener('install', (e) => {

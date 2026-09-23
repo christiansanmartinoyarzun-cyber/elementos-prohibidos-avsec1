@@ -13,6 +13,8 @@
   --azul-dgac: #0F3C7A;
   /* Variante clara del azul para mantener contraste sobre fondo oscuro */
   --azul-dgac-claro: #9CC2FF;
+  /* Azul oscuro para el titular (modo claro) */
+  --azul-titulo: #0A2A5C;
   --papel: #F3F5F8;
   --asfalto: #1B2330;
   --pista: #262F3D;
@@ -138,11 +140,14 @@ html.dark .marca-icono {
 }
 
 .titular {
-  font-size: clamp(1.9rem, 5.5vw + 0.6rem, 3rem);
+  /* Una sola línea: el tamaño se ajusta al ancho de la pantalla
+     (ancho disponible ÷ 18) y se detiene en 2.6rem en pantallas grandes */
+  font-size: min(2.6rem, calc((100vw - 2rem) / 18));
   font-weight: 700;
-  line-height: 1.06;
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  max-width: 15ch;
+  white-space: nowrap;
+  color: var(--azul-titulo);
 }
 
 html.dark .titular {
